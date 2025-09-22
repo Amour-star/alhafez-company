@@ -87,7 +87,7 @@ const AlhafezCompany = () => {
       phone: "+90 5388639220",
       cleanPhone: "905388639220",
       image:
-        "/baba.jpg",
+        "/images/baba.jpg",
       description: "خبرة واسعة في مجال الكهرباء والمعدات الصناعية",
     },
     {
