@@ -96,7 +96,7 @@ const AlhafezCompany = () => {
       phone: "+90 5522722200",
       cleanPhone: "905522722200",
       image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+        "/images/waseem.jpg",
       description: "متخصص في الاستشارات الفنية والحلول المتقدمة",
     },
   ];
