@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Menu, X, Phone,  MapPin, MessageCircle } from "lucide-react";
+import { Menu, X, Phone, MapPin, MessageCircle } from "lucide-react";
+import Hero from "./components/Hero";
 
 const AlhafezCompany = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -127,7 +128,7 @@ const AlhafezCompany = () => {
   ];
 
   return (
-    <div style={{ direction: "rtl", fontFamily: "Arial, sans-serif" }}>
+    <div style={{ direction: "rtl", fontFamily: '"Cairo", "Tajawal", Arial, sans-serif' }}>
       {/* Navigation */}
       <nav
         style={{
@@ -204,98 +205,10 @@ const AlhafezCompany = () => {
       </nav>
 
       {/* Hero Section */}
-      <section
-        id="home"
-        style={{
-          background:
-            "linear-gradient(135deg, #2563eb 0%, #1d4ed8 50%, #3730a3 100%)",
-          color: "white",
-          paddingTop: "120px",
-          paddingBottom: "80px",
-          textAlign: "center",
-        }}
-      >
-        <div
-          style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 20px" }}
-        >
-          <h1
-            style={{
-              fontSize: "48px",
-              fontWeight: "bold",
-              marginBottom: "20px",
-              lineHeight: "1.2",
-            }}
-          >
-            <span style={{ color: "#fbbf24" }}>الحافظ</span>
-            <br />
-            شركة الغطاسات
-          </h1>
-          <p
-            style={{
-              fontSize: "24px",
-              marginBottom: "20px",
-              opacity: 0.9,
-            }}
-          >
-            نوفر لكم أفضل الغطاسات بكافة القياسات والكابلات ولوحات التحكم
-            الصناعية
-          </p>
-          <p
-            style={{
-              fontSize: "18px",
-              marginBottom: "40px",
-              opacity: 0.8,
-            }}
-          >
-            جودة عالية • أسعار تنافسية • خدمة مميزة
-          </p>
-          <div
-            style={{
-              display: "flex",
-              gap: "20px",
-              justifyContent: "center",
-              flexWrap: "wrap",
-            }}
-          >
-            <button
-              onClick={() => scrollToSection("services")}
-              style={{
-                backgroundColor: "#fbbf24",
-                color: "#1e3a8a",
-                padding: "15px 30px",
-                borderRadius: "8px",
-                border: "none",
-                fontSize: "16px",
-                fontWeight: "bold",
-                cursor: "pointer",
-                transition: "all 0.3s",
-              }}
-            >
-              تصفح خدماتنا
-            </button>
-            <button
-              onClick={() => openWhatsApp("905522722200", "وسيم")}
-              style={{
-                backgroundColor: "transparent",
-                color: "white",
-                padding: "15px 30px",
-                borderRadius: "8px",
-                border: "2px solid white",
-                fontSize: "16px",
-                fontWeight: "bold",
-                cursor: "pointer",
-                display: "flex",
-                alignItems: "center",
-                gap: "8px",
-                transition: "all 0.3s",
-              }}
-            >
-              <MessageCircle size={20} />
-              تواصل معنا الآن
-            </button>
-          </div>
-        </div>
-      </section>
+      <Hero
+        scrollToSection={scrollToSection}
+        onWhatsAppClick={() => openWhatsApp("905522722200", "وسيم")}
+      />
 
       {/* About Section */}
       <section
